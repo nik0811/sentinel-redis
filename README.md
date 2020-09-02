@@ -2,8 +2,8 @@
 ```
    e.g,
       ./script.sh
-```
-###Dependencies
+
+Dependencies:
 1. node js
 2. docker (Non-root user preferred)
 3. sentinel
