@@ -1,6 +1,3 @@
-###AUTHOR `NIKHIL KUMAR`
-####EMAIL `nikhil811raj@gmail.com`
-
 ### Please follow the below procedure to run the HA REDIS Cluster.
 ```
    e.g,
