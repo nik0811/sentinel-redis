@@ -1,0 +1,19 @@
+master:
+  image: redis:latest
+  ports:
+      - 6379:6379
+slave:
+  image: redis:latest
+  command: redis-server --slaveof redis-master 6379
+  links:
+    - master:redis-master
+sentinel:
+  build: .
+  ports:
+      - 26379:26379
+  environment:
+    - SENTINEL_DOWNTIME=5000
+    - SENTINEL_FAILOVER=5000
+  links:
+    - master:redis-master
+    - slave
